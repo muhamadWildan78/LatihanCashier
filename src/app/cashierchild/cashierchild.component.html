@@ -1,0 +1,26 @@
+<h2>List Table Cashier</h2>
+<table class="table table-responsive table-striped">
+  <thead>
+  <tr>
+    <th>Sku</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Jumlah</th>
+    <th>Edit</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let id of listCashier; index as i">
+    <td>{{ id.sku }}</td>
+    <td>{{ id.qty }}</td>
+    <td>{{ id.price }}</td>
+    <td>{{id.jumlah}}</td>
+    <td><button  class="btn btn-dark" (click)="edit(i)">Edit</button></td>
+  </tr>
+  <tr>
+    <th>Total : </th>
+    <b>{{total}}</b>
+  </tr>
+  </tbody>
+</table>
+

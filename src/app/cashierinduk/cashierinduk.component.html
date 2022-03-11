@@ -1,0 +1,28 @@
+<p>Input Cashier</p>
+<div class="m-3">
+  <form [formGroup]="formAdd">
+    <div class="row">
+      <div class="col-md-2">
+        <label for="sku">Sku</label>
+        <input type="text" class="form-control" id="sku" aria-describedby="emailHelp"
+               placeholder="Enter Sku" formControlName="sku">
+      </div>
+      <div class="col-md-2">
+        <label for="qty">Quantity</label>
+        <input type="text" class="form-control" id="qty" aria-describedby="emailHelp"
+               placeholder="Enter Quantity" formControlName="qty">
+      </div>
+
+      <div class="col-md-2">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" aria-describedby="emailHelp"
+               placeholder="Enter Price" formControlName="price">
+      </div>
+    </div>
+    <br>
+    <div class="d-grid justify-content-md-end">
+      <button class="btn btn-outline-dark" type="submit" (click)="simpan()">Simpan</button>
+    </div>
+  </form>
+</div>
+<app-cashierchild [message]="sendMessage" (sendToInduk)="saveMessage($event)"></app-cashierchild>
